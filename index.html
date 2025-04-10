@@ -61,21 +61,43 @@
     <a href="#legendy">Legendy</a>
   </nav>
 
+  <section id="home">
+    <h2>Kraków</h2>
+ <p>Wybierz jedną z opcji, aby dowiedzieć się więcej o Krakowie!</p>
+  </section>
+
   <section id="informacje">
+    <button class="back-btn" onclick="goBack()">← Powrót</button>
     <h2>Informacje o Krakowie</h2>
     <p>Kraków to jedno z najstarszych i najpiękniejszych miast w Polsce, położone nad Wisłą. Dawna stolica kraju, a obecnie jedno z najważniejszych centrów kultury, nauki i turystyki. Znajduje się tu m.in. Zamek Królewski na Wawelu, Rynek Główny z Kościołem Mariackim oraz Uniwersytet Jagielloński – jedna z najstarszych uczelni w Europie.</p>
   </section>
 
   <section id="tradycje">
+    <button class="back-btn" onclick="goBack()">← Powrót</button>
     <h2>Tradycje krakowskie</h2>
     <p>Kraków słynie z wielu unikalnych tradycji. Jedną z nich jest Lajkonik – barwna postać Tatarzyna na koniu, która co roku przemierza ulice miasta. Inna ważna tradycja to Hejnał Mariacki grany co godzinę z wieży Kościoła Mariackiego. Tradycją są też juwenalia, pochody i uroczystości związane z Uniwersytetem Jagiellońskim.</p>
   </section>
 
   <section id="legendy">
+    <button class="back-btn" onclick="goBack()">← Powrót</button>
     <h2>Legendy krakowskie</h2>
     <p>W Krakowie krążą liczne legendy, z których najbardziej znana to legenda o Smoku Wawelskim. Według niej smok mieszkał w jaskini pod Wawelem i pożerał mieszkańców, aż został pokonany przez sprytnego szewca Skubę. Inna legenda mówi o dwóch braciach budujących Kościół Mariacki – jeden z nich z zazdrości zabił drugiego. Dziś jedna z wież kościoła jest wyraźnie wyższa od drugiej.</p>
   </section>
 
+  <script>
+    function showContent(contentId) {
+       const sections = document.querySelectorAll('section');
+       sections.forEach(section => section.style.display = 'none');
+        document.getElementById(contentId).style.display = 'block';
+    }
+
+    function goBack() {
+      document.getElementById('home').style.display = 'block';
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.style.display = 'none');
+    }
+  </script>
+      
   <footer>
     &copy; 2025 Kraków Info. Wszelkie prawa zastrzeżone.
   </footer>
