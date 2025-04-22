@@ -168,6 +168,7 @@
     function showContent(contentId) {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => section.classList.remove('active'));
+      document.getElementById('wstep').style.display = 'none'; // Ukrywa wstęp
       const selectedSection = document.getElementById(contentId);
       selectedSection.classList.add('active');
     }
@@ -175,6 +176,7 @@
     function backToNav() {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => section.classList.remove('active'));
+      document.getElementById('wstep').style.display = 'block'; // Pokazuje wstęp z powrotem
     }
   </script>
 
